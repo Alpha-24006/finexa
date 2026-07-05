@@ -1,0 +1,115 @@
+@import "tailwindcss";
+@import "./theme.css";
+
+@theme {
+  --color-border: rgba(255, 255, 255, 0.15);
+  --color-input: rgba(255, 255, 255, 0.1);
+  --color-ring: rgba(255, 255, 255, 0.2);
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  
+  --color-glass-light: rgba(255, 255, 255, 0.15);
+  --color-glass-dark: rgba(15, 23, 42, 0.3);
+  --color-glass-border: rgba(255, 255, 255, 0.12);
+  --color-glass-highlight: rgba(255, 255, 255, 0.2);
+  
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  --shadow-glass-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-glass-md: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
+  --shadow-glass-lg: 0 20px 40px 0 rgba(0, 0, 0, 0.2);
+
+  --animate-pulse-subtle: pulse-subtle 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-float-slow: float-slow 6s ease-in-out infinite;
+
+  @keyframes pulse-subtle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.85; }
+  }
+  @keyframes float-slow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground transition-colors duration-300 font-sans antialiased;
+    background-image: radial-gradient(at 0% 0%, rgba(139, 92, 246, 0.08) 0px, transparent 50%),
+                      radial-gradient(at 50% 0%, rgba(59, 130, 246, 0.08) 0px, transparent 50%),
+                      radial-gradient(at 100% 0%, rgba(236, 72, 153, 0.08) 0px, transparent 50%);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+
+  .dark body {
+    background-image: radial-gradient(at 0% 0%, rgba(124, 58, 237, 0.12) 0px, transparent 50%),
+                      radial-gradient(at 50% 0%, rgba(29, 78, 216, 0.08) 0px, transparent 50%),
+                      radial-gradient(at 100% 0%, rgba(219, 39, 119, 0.08) 0px, transparent 50%);
+    background-attachment: fixed;
+  }
+}
+
+/* Glassmorphism custom classes */
+.glass-card {
+  @apply backdrop-blur-md border border-white/20 dark:border-white/10 shadow-glass-md transition-all duration-300;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.dark .glass-card {
+  background: rgba(15, 23, 42, 0.35);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.glass-card-hover {
+  @apply hover:shadow-glass-lg hover:border-white/30 dark:hover:border-white/15 hover:-translate-y-0.5 duration-300;
+}
+
+.glass-input {
+  @apply bg-white/20 dark:bg-slate-900/30 border border-white/30 dark:border-slate-800/40 rounded-xl px-4 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all placeholder:text-muted-foreground/60;
+}
+
+.glass-btn {
+  @apply bg-gradient-to-r from-primary to-indigo-600 text-white font-medium px-4 py-2 rounded-xl hover:shadow-lg hover:shadow-primary/20 active:scale-95 transition-all duration-200 disabled:opacity-50 disabled:pointer-events-none;
+}
+
+.glass-btn-secondary {
+  @apply bg-white/35 dark:bg-slate-800/40 border border-white/20 dark:border-slate-700/30 text-foreground font-medium px-4 py-2 rounded-xl hover:bg-white/45 dark:hover:bg-slate-700/50 active:scale-95 transition-all duration-200;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300/40 dark:bg-slate-700/40 rounded-full hover:bg-slate-400/50 dark:hover:bg-slate-600/50;
+}
