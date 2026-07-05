@@ -192,7 +192,7 @@ export function exportExpensesToPDF(expenses: Expense[], reportName = 'Expense R
       <body>
         <div class="header">
           <div>
-            <div class="logo">FINANCE AI</div>
+            <div class="logo">FINEXA</div>
             <h1 class="title">${reportName}</h1>
           </div>
           <div class="meta">

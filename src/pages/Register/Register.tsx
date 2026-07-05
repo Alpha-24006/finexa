@@ -55,7 +55,7 @@ export const Register: React.FC = () => {
         </div>
         <div>
           <h1 className="font-extrabold text-2xl tracking-tight bg-gradient-to-r from-primary to-indigo-500 bg-clip-text text-transparent">
-            FINANCE AI
+            FINEXA
           </h1>
           <p className="text-[10px] text-muted-foreground font-extrabold uppercase tracking-widest -mt-1">Predictive Expense System</p>
         </div>
@@ -65,7 +65,7 @@ export const Register: React.FC = () => {
       <div className="w-full max-w-md glass-card rounded-3xl p-8 border border-white/20 dark:border-white/10 shadow-2xl">
         <div className="text-center mb-6">
           <h2 className="text-xl font-extrabold text-foreground">Create Account</h2>
-          <p className="text-xs text-muted-foreground mt-1 font-semibold">Join Finance AI to forecast and budget your wealth</p>
+          <p className="text-xs text-muted-foreground mt-1 font-semibold">Join Finexa to forecast and budget your wealth</p>
         </div>
 
         {error && (

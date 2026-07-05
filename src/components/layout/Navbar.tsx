@@ -25,7 +25,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onMenuToggle }) => {
       case '/profile': return 'User Profile';
       case '/settings': return 'System Settings';
       case '/admin': return 'Administration Console';
-      default: return 'Finance AI';
+      default: return 'FINEXA';
     }
   };
 
@@ -67,7 +67,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onMenuToggle }) => {
             {getPageTitle()}
           </h2>
           <div className="hidden md:flex items-center gap-1.5 text-xs text-muted-foreground font-semibold mt-0.5 uppercase tracking-wider">
-            <span>Finance AI</span>
+            <span>FINEXA</span>
             <span>•</span>
             <span className="flex items-center gap-1">
               <Calendar className="w-3.5 h-3.5" />

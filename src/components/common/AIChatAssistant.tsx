@@ -35,7 +35,7 @@ export const AIChatAssistant: React.FC = () => {
         {
           id: 'welcome',
           sender: 'ai',
-          text: `Hi! I am your Finance AI Companion. 🤖🔮 I can analyze your spending habits, help you manage budgets, and project future expenses. 
+          text: `Hi! I am your Finexa AI Companion. 🤖🔮 I can analyze your spending habits, help you manage budgets, and project future expenses. 
 
 Try asking:
 • "How is my budget looking?"
@@ -158,7 +158,7 @@ The AI confidence score for this prediction is **${forecastResults.confidence}%*
             <div className="flex items-center gap-2 text-white">
               <Bot className="w-6 h-6 animate-pulse-subtle" />
               <div>
-                <span className="font-extrabold text-sm tracking-wide">Finance AI Advisor</span>
+                <span className="font-extrabold text-sm tracking-wide">Finexa AI Advisor</span>
                 <span className="block text-[10px] text-indigo-200 font-semibold tracking-widest uppercase">Predictive Bot</span>
               </div>
             </div>

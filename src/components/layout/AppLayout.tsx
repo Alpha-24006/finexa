@@ -16,7 +16,7 @@ export const AppLayout: React.FC = () => {
       <div className="flex flex-col items-center justify-center min-h-screen bg-background">
         <div className="relative flex flex-col items-center justify-center p-8 rounded-3xl glass-card border border-white/20 dark:border-white/10 shadow-2xl w-80">
           <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin mb-4" />
-          <h3 className="font-extrabold text-lg text-foreground animate-pulse-subtle">FINANCE AI</h3>
+          <h3 className="font-extrabold text-lg text-foreground animate-pulse-subtle">FINEXA</h3>
           <p className="text-xs text-muted-foreground mt-1 font-medium">Securing session...</p>
         </div>
       </div>

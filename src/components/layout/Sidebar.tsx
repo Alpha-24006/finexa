@@ -74,7 +74,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
             </div>
             <div>
               <span className="font-extrabold text-xl tracking-tight bg-gradient-to-r from-primary to-indigo-500 bg-clip-text text-transparent">
-                Finance AI
+                FINEXA
               </span>
               <p className="text-[10px] text-muted-foreground font-semibold uppercase tracking-widest -mt-1">Forecaster</p>
             </div>

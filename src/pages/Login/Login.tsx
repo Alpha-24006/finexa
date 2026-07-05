@@ -62,7 +62,7 @@ export const Login: React.FC = () => {
         </div>
         <div>
           <h1 className="font-extrabold text-2xl tracking-tight bg-gradient-to-r from-primary to-indigo-500 bg-clip-text text-transparent">
-            FINANCE AI
+            FINEXA
           </h1>
           <p className="text-[10px] text-muted-foreground font-extrabold uppercase tracking-widest -mt-1">Predictive Expense System</p>
         </div>
